@@ -1,0 +1,180 @@
+    {
+  "analysisId": "01KE7GTEJJBS32VQM8GERZMNW6",
+  "status": "ANALYSIS_STATUS_COMPLETED",
+  "report": {
+    "packageVersion": {
+      "package": {
+        "ecosystem": "ECOSYSTEM_NPM",
+        "name": "express"
+      },
+      "version": "4.10.5"
+    },
+    "target": {
+      "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+      "sha256": "537044df8a20b2e26f8fad6c59c76830aedb12e4c3d5ae2466dca74815267464"
+    },
+    "fileSystem": {
+      "files": [
+        {
+          "key": "package/package.json",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "3c009df2c0cd14a68b6ae6079d6c21349d0e4c926e9a2ac4271891c471e3c269",
+          "derivedExtension": "unknown",
+          "size": "2571"
+        },
+        {
+          "key": "package/LICENSE",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "2fe0235fa666d2901b0d3d0b733ebeea794e8da2d9d54bcc98af2b58e1a1262c",
+          "derivedExtension": "unknown",
+          "size": "1103"
+        },
+        {
+          "key": "package/index.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "998ac44cbce572a7453982016addf7db968f7815858b6dad925571226a07bb9a",
+          "derivedExtension": "unknown",
+          "size": "42"
+        },
+        {
+          "key": "package/History.md",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "e9c7cb7a1a308d27799dd28c2f5431fa17941c57c988cc8514359d86300b84bb",
+          "derivedExtension": "unknown",
+          "size": "78007"
+        },
+        {
+          "key": "package/Readme.md",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "c7db040bcf042757fbcf3e8e775827255755c66a1886494ae2502e2f62311a51",
+          "derivedExtension": "unknown",
+          "size": "4268"
+        },
+        {
+          "key": "package/lib/application.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "1a6b3164f83afff681e5292b90ae68270f84b02f4bc77e297360afd51ee5e0db",
+          "derivedExtension": "unknown",
+          "size": "7010"
+        },
+        {
+          "key": "package/lib/express.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "2d1d7e3f3ad96260debda174345e4bbaecccd029cf1fb4fafdc3a7a7fdee9c25",
+          "derivedExtension": "unknown",
+          "size": "1442"
+        },
+        {
+          "key": "package/lib/request.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "294830496bf0cbbcd9704ee30b58a5298fa43bd28cc88f04d342acea94c5ca5c",
+          "derivedExtension": "unknown",
+          "size": "4390"
+        },
+        {
+          "key": "package/lib/response.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "bf5b425f37eba44fcd72d730e5c9bdc67ede8b87cddb641e48060946e367a175",
+          "derivedExtension": "unknown",
+          "size": "12785"
+        },
+        {
+          "key": "package/lib/utils.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "877b27472fca18e75ae21f26ec87bf4ba768a857ab2f4b37320353695f69bae3",
+          "derivedExtension": "unknown",
+          "size": "3475"
+        },
+        {
+          "key": "package/lib/view.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "8f32558b18098c3328c08675776206980339585236f799501337c765f2324578",
+          "derivedExtension": "unknown",
+          "size": "1857"
+        },
+        {
+          "key": "package/lib/middleware/init.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "6d2b4d4b719a86d0bdaa51991709ffe6658affcccc08aea1aa311e613343bfda",
+          "derivedExtension": "unknown",
+          "size": "358"
+        },
+        {
+          "key": "package/lib/middleware/query.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "387271209f6cf60a6dc878924a42f4325dd01d275fb96d48f84f5f2a2067b69d",
+          "derivedExtension": "unknown",
+          "size": "403"
+        },
+        {
+          "key": "package/lib/router/index.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "fa70f890d3f2f706d0ff877d5cae96fd3c6d672650b383307778001ca3aade4d",
+          "derivedExtension": "unknown",
+          "size": "9168"
+        },
+        {
+          "key": "package/lib/router/layer.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "c6d06b0e8af7a00be3f61f401814d51c409a40eecc5936618cdb40de3d643aec",
+          "derivedExtension": "unknown",
+          "size": "2133"
+        },
+        {
+          "key": "package/lib/router/route.js",
+          "origin": "https://registry.npmjs.org/express/-/express-4.10.5.tgz",
+          "sha256": "27b86a3ee565da3cd2e719508f9ccac1f1fe4e4e00e0b7bd7b7e9ef2e934bdbd",
+          "derivedExtension": "unknown",
+          "size": "2463"
+        }
+      ]
+    },
+    "analyzedAt": "2026-01-05T16:46:10.374326887Z",
+    "inference": {
+      "confidence": "CONFIDENCE_HIGH",
+      "details": "No malware evidence were identified by any tool in the workflow",
+      "summary": "No malware evidence were identified by any tool in the workflow"
+    },
+    "reportId": "01KE7GTEJJBS32VQM8GERZMNW6",
+    "packageMetrics": {
+      "downloads": {
+        "daily": "3425294",
+        "weekly": "31768560",
+        "monthly": "187186142",
+        "total": "2266990025",
+        "updatedAt": "2026-01-05T16:46:09.145321845Z"
+      },
+      "maintainersCount": "5"
+    },
+    "publishers": [
+      {
+        "name": "tjholowaychuk",
+        "email": "tj@vision-media.ca"
+      },
+      {
+        "name": "jongleberry",
+        "email": "jonathanrichardong@gmail.com"
+      },
+      {
+        "name": "shtylman",
+        "email": "shtylman@gmail.com"
+      },
+      {
+        "name": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      {
+        "name": "aredridel",
+        "email": "aredridel@nbtsc.org"
+      },
+      {
+        "name": "strongloop",
+        "email": "callback@strongloop.com"
+      },
+      {
+        "name": "rfeng",
+        "email": "enjoyjava@gmail.com"
+      }
+    ]
+  }
+}
