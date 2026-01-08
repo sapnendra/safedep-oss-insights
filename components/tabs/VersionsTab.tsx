@@ -48,8 +48,13 @@ export function VersionsTab({
   const versions = Array.isArray(rawVersions) ? rawVersions : [];
   const currentVersion = data.packageVersion?.version;
 
-  // Sort versions by publishedAt (newest first)
+  // Sort versions: defaultVersion (Latest) first, then by publishedAt (newest first)
   const sortedVersions = [...versions].sort((a, b) => {
+    // Latest version always comes first
+    if (a.defaultVersion && !b.defaultVersion) return -1;
+    if (!a.defaultVersion && b.defaultVersion) return 1;
+    
+    // Then sort by publishedAt (newest first)
     const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
     const dateB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
     return dateB - dateA;

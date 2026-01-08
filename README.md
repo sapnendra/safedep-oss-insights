@@ -207,8 +207,8 @@ http://localhost:3000/p/{ecosystem}/{package-name}/{version}
 
 Examples:
 - npm package: `http://localhost:3000/p/npm/lodash/4.17.21`
-- PyPI package: `http://localhost:3000/p/pypi/requests/2.31.0`
-- Go module: `http://localhost:3000/p/go/github.com%2Fgorilla%2Fmux/1.8.0`
+- PyPI package: `http://localhost:3000/p/npm/express/4.22.1`
+- Go module: `http://localhost:3000/p/npm/react/19.2.3`
 
 ### Package Information Tabs
 

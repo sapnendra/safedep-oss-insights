@@ -9,7 +9,6 @@ export async function getPackageInsights(params: {
 }) {
   try {
     const data = await fetchPackageInsights(params);
-    // console.log("Insights API Response:", data);
     return { success: true, data };
   } catch (error) {
     console.error("SafeDep API error:", error);

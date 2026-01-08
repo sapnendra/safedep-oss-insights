@@ -9,7 +9,6 @@ export async function getPackageMalysis(params: {
 }) {
   try {
     const data = await fetchPackageMalysis(params);
-    // console.log("Malysis API Response:", data);
     return { success: true, data };
   } catch (error: unknown) {
     // NotFound errors are expected for packages without malware analysis
