@@ -266,7 +266,7 @@ Please ensure your code follows the existing style and passes linting.
 
 ## License
 
-This project is private. See the repository for license details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
