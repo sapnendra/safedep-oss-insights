@@ -245,13 +245,12 @@ The application supports the following package ecosystems:
 
 | Ecosystem | URL Parameter | Example Package |
 |-----------|---------------|-----------------|
-| npm | `npm` | lodash, react, express |
-| PyPI | `pypi` | requests, django, flask |
+| npm | `npm` | Node.js packages |
+| PyPI | `pypi` | Python packages |
 | Go | `go` | github.com/gorilla/mux |
-| Maven | `maven` | org.apache.commons:commons-lang3 |
-| RubyGems | `rubygems` | rails, bundler |
-| Cargo | `cargo` | serde, tokio |
-| NuGet | `nuget` | Newtonsoft.Json |
+| Maven | `maven` | Java/JVM packages |
+| Cargo | `cargo` | Rust packages |
+| NuGet | `nuget` | .NET packages |
 
 ## Contributing
 

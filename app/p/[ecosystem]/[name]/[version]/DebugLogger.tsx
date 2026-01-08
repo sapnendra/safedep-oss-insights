@@ -11,7 +11,6 @@ export function DebugLogger({
 }) {
   useEffect(() => {
     console.log(`[${label}]`, data);
-    // console.log("Debug Logger");
   }, [data, label]);
 
   return null;

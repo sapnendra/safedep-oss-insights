@@ -119,6 +119,7 @@ export default async function PackagePage({ params }: PageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-x border-b rounded-b">
+      
       {/* Debug Logger - logs to browser console */}
       <DebugLogger data={malysisData} label="Malysis API Response" />
       
