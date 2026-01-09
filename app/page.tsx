@@ -25,16 +25,16 @@ export default function Home() {
       <div className="max-w-2xl w-full text-center space-y-8">
         {/* Title */}
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold text-gray-900">SafeDep Insights</h1>
+          <h1 className="text-3xl font-bold text-gray-600">SafeDep Insights</h1>
           <p className="text-gray-500">
             Analyze open source packages for security, licenses, and more
           </p>
         </div>
 
         {/* URL Pattern */}
-        <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <div className="flex items-center flex-col justify-center bg-white border border-gray-200 rounded-lg py-4 px-5">
           <p className="text-sm text-gray-500 mb-2">URL Pattern:</p>
-          <code className="text-sm bg-gray-100 px-3 py-1.5 rounded font-mono text-gray-700">
+          <code className="text-xs sm:text-sm bg-gray-100 px-3 py-1.5 rounded font-mono text-gray-700">
             /p/{"{ecosystem}"}/{"{name}"}/{"{version}"}
           </code>
         </div>
