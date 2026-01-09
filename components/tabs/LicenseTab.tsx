@@ -7,28 +7,22 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PackageInsightsData } from "@/lib/types/insights";
+import { useLicenseData, getLicenseDisplay, getLicenseName } from "@/lib/hooks";
 
 interface LicenseTabProps {
   data: PackageInsightsData;
 }
 
 export function LicenseTab({ data }: LicenseTabProps) {
-  // Licenses is nested: insight.licenses.licenses[]
-  const rawLicenses = data.insight?.licenses?.licenses;
-  const licenses = Array.isArray(rawLicenses) ? rawLicenses : [];
+  const { licenses, hasLicenses } = useLicenseData({ data });
 
-  if (licenses.length === 0) {
+  if (!hasLicenses) {
     return (
       <div className="text-gray-500 text-center py-8">
         No license information available for this package.
       </div>
     );
   }
-
-  // Helper to get license name or ID for display
-  const getLicenseDisplay = (license: typeof licenses[0]) => {
-    return license.licenseId || license.name || "Unknown";
-  };
 
   return (
     <Table>
@@ -55,7 +49,7 @@ export function LicenseTab({ data }: LicenseTabProps) {
               {getLicenseDisplay(license)}
             </TableCell>
             <TableCell className="text-gray-600">
-              {license.name || license.licenseId || "N/A"}
+              {getLicenseName(license)}
             </TableCell>
             <TableCell>
               {license.reference ? (

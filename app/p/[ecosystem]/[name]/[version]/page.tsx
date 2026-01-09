@@ -4,7 +4,6 @@ import { PackageHeader } from "@/components/package/PackageHeader";
 import { StatsCards } from "@/components/package/StatsCards";
 import { PackageTabs } from "@/components/tabs/PackageTabs";
 import { PackageInsightsData } from "@/lib/types/insights";
-import { DebugLogger } from "./DebugLogger";
 
 // Malysis API response type
 interface MalysisData {
@@ -119,9 +118,6 @@ export default async function PackagePage({ params }: PageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-x border-b rounded-b">
-      
-      {/* Debug Logger - logs to browser console */}
-      <DebugLogger data={malysisData} label="Malysis API Response" />
       
       <div className="space-y-6">
         {/* Package Header Card */}

@@ -26,7 +26,7 @@ A beginner-friendly guide to understanding all the Next.js concepts used in this
 18. [React 19 Features](#18-react-19-features)
 19. [Development Scripts](#19-development-scripts)
 20. [File Conventions](#20-file-conventions)
-21. [**Next.js vs React: Key Differences**](#21-nextjs-vs-react-key-differences-explained) ⭐ NEW!
+21. [**Next.js vs React: Key Differences**](#21-nextjs-vs-react-key-differences-explained) NEW!
 
 
 ---

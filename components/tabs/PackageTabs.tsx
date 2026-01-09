@@ -47,28 +47,28 @@ export function PackageTabs({
 }: PackageTabsProps) {
   return (
     <Tabs defaultValue="overview" className="w-full">
-      <TabsList className="w-1/2 bg-gray-100 rounded-lg p-2 justify-start h-auto gap-1">
+      <TabsList className="w-full sm:w-auto bg-gray-100 rounded-lg p-2 justify-start h-auto gap-1 overflow-x-auto flex-nowrap">
         <TabsTrigger
           value="overview"
-          className="rounded-md px-4 py-2 text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all"
+          className="rounded-md px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all whitespace-nowrap"
         >
           Overview
         </TabsTrigger>
         <TabsTrigger
           value="vulnerabilities"
-          className="rounded-md px-4 py-2 text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all"
+          className="rounded-md px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all whitespace-nowrap"
         >
           Vulnerabilities
         </TabsTrigger>
         <TabsTrigger
           value="versions"
-          className="rounded-md px-4 py-2 text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all"
+          className="rounded-md px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all whitespace-nowrap"
         >
           Versions
         </TabsTrigger>
         <TabsTrigger
           value="license"
-          className="rounded-md px-4 py-2 text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all"
+          className="rounded-md px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm transition-all whitespace-nowrap"
         >
           License
         </TabsTrigger>

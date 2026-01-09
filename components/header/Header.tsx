@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -12,10 +13,21 @@ export function Header() {
               <span className="text-[10px] uppercase tracking-wider text-gray-500 font-medium">
                 Powered by
               </span>
-              <a href="https://safedep.io" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://safedep.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="w-30 flex items-center">
-                <img className="w-full h-full object-cover" src="https://mintcdn.com/safedep/SBr4leJ2Q_jWmTGH/images/full-logo-for-light-theme.png?fit=max&auto=format&n=SBr4leJ2Q_jWmTGH&q=85&s=c5133b0c57a88228719710fb4c94ff90" alt="" />
-              </div>
+                  <Image
+                    className="w-full h-auto object-cover"
+                    src="https://mintcdn.com/safedep/SBr4leJ2Q_jWmTGH/images/full-logo-for-light-theme.png?fit=max&auto=format&n=SBr4leJ2Q_jWmTGH&q=85&s=c5133b0c57a88228719710fb4c94ff90"
+                    alt="SafeDep Logo"
+                    width={120}
+                    height={30}
+                    unoptimized
+                  />
+                </div>
               </a>
             </div>
           </div>

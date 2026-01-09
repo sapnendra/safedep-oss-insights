@@ -1,5 +1,4 @@
 import { PackageInsightsData } from "@/lib/types/insights";
-import { log } from "console";
 
 // Malysis API response type
 interface MalysisData {
@@ -35,24 +34,23 @@ interface PackageHeaderProps {
 export function PackageHeader({ data, malysisData }: PackageHeaderProps) {
   const packageName = data.packageVersion?.package?.name || "Unknown Package";
   const version = data.packageVersion?.version || "";
-  const ecosystem =
-    data.packageVersion?.package?.ecosystem?.replace("ECOSYSTEM_", "") || "";
-  
+
   // Check if malysis data is available (version has been scanned)
-  const hasMalysisData = malysisData && malysisData.status === "ANALYSIS_STATUS_COMPLETED";
-  
-  // Extract target from malysisData (using type assertion to handle JSON structure)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const malysisTarget = hasMalysisData ? (malysisData as any)?.report?.target : null;
-  
+  const hasMalysisData =
+    malysisData && malysisData.status === "ANALYSIS_STATUS_COMPLETED";
+
+  // Extract target from malysisData report
+  const malysisTarget = hasMalysisData
+    ? (malysisData?.report as { target?: { origin?: string; sha256?: string } })
+        ?.target
+    : null;
+
   // Use malysis data for analysis info, fallback to insights data
-  const analysedAt = hasMalysisData ? malysisData?.report?.analyzedAt : data.insight?.analysedAt;
+  const analysedAt = hasMalysisData
+    ? malysisData?.report?.analyzedAt
+    : data.insight?.analysedAt;
   const sourceUrl = malysisTarget?.origin || data.insight?.sourceUrl;
   const sha256 = malysisTarget?.sha256 || data.insight?.sha256;
-  // Confidence ID from reportId or analysisId
-  const confidenceId = hasMalysisData 
-    ? (malysisData?.report?.reportId || malysisData?.analysisId) 
-    : data.insight?.sha256;
 
   // Format the analysed date
   const formatDate = (dateString?: string) => {
@@ -76,11 +74,23 @@ export function PackageHeader({ data, malysisData }: PackageHeaderProps) {
       {/* Not Scanned Banner */}
       {!hasMalysisData && (
         <div className="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg flex items-center gap-2">
-          <svg className="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          <svg
+            className="w-5 h-5 text-amber-500 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
           </svg>
           <p className="text-sm text-amber-700">
-            <span className="font-medium">Security analysis pending:</span> This version hasn&apos;t been scanned yet. Malware analysis data will be available once the scan is complete.
+            <span className="font-medium">Security analysis pending:</span> This
+            version hasn&apos;t been scanned yet. Malware analysis data will be
+            available once the scan is complete.
           </p>
         </div>
       )}
@@ -102,18 +112,22 @@ export function PackageHeader({ data, malysisData }: PackageHeaderProps) {
       {/* Metadata */}
       <div className="space-y-1 text-sm">
         <p className="text-gray-500">
-          <span className="text-gray-400">Analysed at</span>{" "}
-          <span className="text-black">{formatDate(analysedAt)}</span>
+          <span className="text-gray-400 text-xs sm:text-md">
+            Analysed at :{" "}
+          </span>{" "}
+          <span className="text-black text-xs sm:text-md">
+            {formatDate(analysedAt)}
+          </span>
         </p>
 
         <p>
-          <span className="text-gray-400">Source</span>{" "}
+          <span className="text-gray-400 text-xs sm:text-md">Source : </span>{" "}
           {sourceUrl ? (
             <a
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black hover:text-black/70 hover:underline"
+              className="text-black hover:text-black/70 hover:underline text-xs sm:text-md"
             >
               {sourceUrl}
             </a>
@@ -122,17 +136,19 @@ export function PackageHeader({ data, malysisData }: PackageHeaderProps) {
           )}
         </p>
 
-        <p>
-          <span className="text-gray-400">SHA256</span>{" "}
-          <code className="text-black font-mono text-xs">
+        <p className="w-full">
+          <span className="text-gray-400 text-xs sm:text-md">SHA256 : </span>{" "}
+          <code className="text-black text-xs sm:text-md break-all">
             {sha256 || "N/A"}
           </code>
         </p>
 
         <p>
-          <span className="text-gray-400">Confidence</span>{" "}
-          <code className="text-black font-mono text-xs">
-            {sha256 || "N/A"}
+          <span className="text-gray-400 text-xs sm:text-md">
+            Confidence :{" "}
+          </span>{" "}
+          <code className="text-black text-xs sm:text-md">
+            {malysisData?.report?.inference?.confidence || "N/A"}
           </code>
         </p>
       </div>
