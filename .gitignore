@@ -3,6 +3,7 @@
 # Project documentation (personal notes)
 AllAboutNextJSInThisProject.md
 AllAboutTypeScriptInThisProject.md
+ProjectTesting.md
 
 # dependencies
 .env.local
