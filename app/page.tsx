@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const examplePackages = [
-  { ecosystem: "npm", name: "react", version: "19.2.3", label: "React" },
+  { ecosystem: "npm", name: "next", version: "15.5.4", label: "Next" },
   { ecosystem: "npm", name: "express", version: "4.21.2", label: "Express" },
   { ecosystem: "npm", name: "axios", version: "1.7.2", label: "Axios" },
   { ecosystem: "npm", name: "lodash", version: "4.17.21", label: "Lodash" },
