@@ -143,7 +143,7 @@ export function getSeverityConfig(severity?: string): SeverityConfig {
     },
     critical: {
       label: "Critical",
-      className: "bg-red-400 text-red-700 border-red-200",
+      className: "bg-red-400 text-white border-red-200",
       iconType: "alert",
     },
     unspecified: {
